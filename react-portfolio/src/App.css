@@ -1,38 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .App {
+  text-align: center;
+  color: #3c3c3c;
+}
+
+.header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  padding: 20px;
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #007BFF;
+}
+
+.project {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #e9ecef;
+}
+
+footer {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer {
+  background-color: #6c757d;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav {
+  background-color: grey;
+  padding: 10px 0;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact {
+  border: 1px solid #000; /* Add this line */
+  padding: 20px; /* Add this line */
+  margin-bottom: 20px; /* Add this line */
+}
+
+.contact input,
+.contact textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+}
+
+.contact button {
+  border: 1px solid #000; /* Add this line */
+  background-color: #fff; /* Add this line */
+  padding: 10px 20px; /* Add this line */
+  cursor: pointer; /* Add this line */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  margin: 0 10px; /* Add this line */
+}
+
+.nav-button:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+
+  .nav a {
+    margin: 0 5px;
   }
 }
